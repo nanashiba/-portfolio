@@ -1,0 +1,712 @@
+body{
+  font-family: 'Lato', 'Noto Sans JP', 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  color: #444444;
+  /*min-height: 100vh; */ /*高さいっぱいに*/
+  text-align: center;
+}
+header{
+  padding-top: 50px;      /*1000px以下のとき表示される🍔と被らないように*/
+}
+.container_main{
+  flex: 1; /*これでmain横いっぱいに*/
+  margin: 0 auto;
+}
+
+/*----♪-------------------------------------------------------------------------------------*/
+/*アニメーションの初期設定*/
+section .inner div {
+  opacity: 0;
+  -webkit-transform-origin: 0px 0px;
+  -ms-transform-origin: 0px 0px;
+  transform-origin: 0px 0px;
+  -webkit-animation-name: Drop;
+  animation-name: Drop;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+/*桜の設定*/
+#sakura .inner div{
+  position: absolute;
+  display: block;
+  width: 10px;
+  height: 15px;
+  background: url("images/分音符のアイコン素材\ 8.png")  no-repeat;
+}
+#sakura .inner .flake2,
+#sakura .inner .flake4,
+#sakura .inner .flake6,
+#sakura .inner .flake8 {
+  background-size: 10px 10px !important;
+}
+.flake1 {
+  left: 20px;
+  -webkit-animation-duration: 2.5s;
+  animation-duration: 2.5s;
+}
+.flake2 {
+  left: 40px;
+  -webkit-animation-duration: 2.7s;
+  animation-duration: 2.7s;
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+.flake3 {
+  left: 60px;
+  -webkit-animation-duration: 2.9s;
+  animation-duration: 2.9s;
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+}
+.flake4 {
+  left: 80px;
+  -webkit-animation-duration: 2.4s;
+  animation-duration: 2.4s;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+.flake5 {
+  left: 100px;
+  -webkit-animation-duration: 2.4s;
+  animation-duration: 2.4s;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+.flake6 {
+  left: 150px;
+  -webkit-animation-duration: 2.2s;
+  animation-duration: 2.2s;
+  -webkit-animation-delay: 1.2s;
+  animation-delay: 1.2s;
+}
+.flake7 {
+  left: 170px;
+  -webkit-animation-duration: 2.7s;
+  animation-duration: 2.7s;
+  -webkit-animation-delay: 1.2s;
+  animation-delay: 1.2s;
+}
+.flake8 {
+  left: 200px;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-delay: 1.4s;
+  animation-delay: 1.4s;
+}
+@-webkit-keyframes Drop {
+  0% {
+      -webkit-transform: translateY(0px);
+      transform: translateY(0px);
+      opacity: 0;
+  }
+  50% {
+      -webkit-transform: translateY(50px);
+      transform: translateY(50px);
+      opacity: 1;
+  }
+  100% {
+      -webkit-transform: translateY(100px);
+      transform: translateY(100px);
+      opacity: 0.3;
+  }
+}
+@keyframes Drop {
+  0% {
+      -webkit-transform: translateY(0px);
+      transform: translateY(0px);
+      opacity: 0;
+  }
+  50% {
+      -webkit-transform: translateY(50px);
+      transform: translateY(50px);
+      opacity: 1;
+  }
+  100% {
+      -webkit-transform: translateY(100px);
+      transform: translateY(100px);
+      opacity: 0.3;
+  }
+}
+.background{
+  width: 100%;
+  position: relative;
+}
+#sakura{
+  position: absolute;
+  top: 30%;
+  width: 300px;
+  margin-left: 50px;
+}
+
+
+
+/*
+@media screen and (min-width:576px) and (max-width:992px) { 
+  #sakura{
+    position: absolute;
+    top: 35%;
+    width: 300px;
+  }
+}
+*/
+
+/*----共通-----------------------------------------------------------------------------------*/
+.container_main{
+  margin: 0 auto;
+  padding: 0;
+}
+.container{
+  margin: 0 auto;
+  padding: 0;
+}
+.page_section{
+  margin: 0;
+  padding: 0;
+}
+.row{
+  padding: 0;
+}
+.col{
+  margin: 0;
+  padding: 0;
+}
+@import url('https://fonts.googleapis.com/css?family=Sacramento');
+h1{
+  font-family: 'Sacramento', cursive;
+}
+@import url('https://fonts.googleapis.com/css?family=Sawarabi+Mincho');
+h2{
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  font-family: 'Sawarabi Mincho', sans-serif;
+}
+p{
+  margin: 0;
+  padding: 0;
+  font-family: 'Sawarabi Mincho', sans-serif;
+}
+ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-family: 'Sawarabi Mincho', sans-serif;
+}
+/*----メディアクエリ-------------------------------------------------------------------------*/
+@media screen and (max-width: 576px) { 
+  .container{
+    width: 100%;
+    margin: 0em auto;
+    margin-bottom: 100px; 
+    overflow: hidden; /*右の余白を消す*/
+    h1{
+      font-size: 50px;
+    }
+    h2{
+      font-size: 24px;
+    }
+    p{
+      font-size: 14px;
+    }
+  }
+}
+@media screen and (min-width:576px) and (max-width:992px) { 
+  .container{
+    margin-bottom: 100px;
+    h2{
+      margin-top: 180px;
+    }
+    h1{
+      font-size: 70px;
+    }
+    h2{
+      font-size: 36px;
+    }
+    p{
+      font-size: 18px;
+    }
+  }
+}
+
+@media screen and (min-width:992px) {  
+  .container{
+    margin-bottom: 100px;
+    h2{
+      margin-top: 200px;
+    }
+    h1{
+      font-size: 100px;
+    }
+    h2{
+      font-size: 50px;
+    }
+    p{
+      font-size: 18px;
+    }
+  }
+}
+/*----.manu---------------------------------------------------------------------------------*/
+.menu{
+  top: 0;
+  right: 0;
+  position: fixed;
+  z-index: 80;
+  background: #fff;
+  padding-top: 2vw;
+  padding-bottom: 0;
+  width: 100%;
+
+   ul{
+     text-align: right;
+     margin-right: 1vw;
+   }
+   li{
+     list-style: none;
+     display: inline-block;
+     width: 10%;
+     min-width: 90px;
+     text-align: center;
+   }
+   a{
+     text-decoration: none;
+     color: #333;
+   }
+   a:hover{
+    color: #F7CB4D;
+   }
+    a:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+    height: 2px;
+    background: #F7CB4D;
+    transition: 0.3s ease-out;
+    transform: scaleX(0);
+  }
+   a:hover:after {
+    transform: scaleX(1);
+  }
+}
+
+@media screen and (max-width: 576px) { 
+  .menu{
+    display: none;
+  }
+}
+ /*
+ @media screen and (min-width:576px) and (max-width:992px) { 
+  .menu{ 右に寄せたい }
+}
+@media screen and (min-width:992x) {  
+  .menu{ 右に寄せたい }
+}
+ */
+/*----ボトムナビゲーションバー----------------------------------------------------------------------*/
+@media screen and (max-width: 576px) { 
+  .menu_bottom {
+    width: 100%;
+    height: 22vw;
+    bottom: -15px;
+    background: #FFF;
+    position: fixed;
+    z-index:999;
+    transition: 1.0s ;
+    ul{
+      text-align: center;
+    }
+    li{
+      list-style: none;
+      display: inline-block;
+      width: 15%;
+      min-width: 60px;
+      text-align: center;
+      padding-top: 10px;
+    }
+    a{
+      text-decoration: none;
+      color: #1d0b00;
+      transition: 1.0s ;
+    }
+    a:hover{
+     color: #CCC;
+    }
+    li:not(:last-child){
+      border-right:1px solid #CCC;
+    }
+  }
+}
+
+@media screen and (min-width:576px) {  
+  .menu_bottom {
+    display: none;
+  }
+}
+
+/*-------------------------------------------------------------------------------------------*/
+/*--------background--------------------------------------------------------------------------*/
+#music {
+  background-image: url(images/printed-musical-note-page-164821.jpg);
+  width: 100%;
+  height: 440px;
+  background-size: cover;
+}
+.bg-mask {
+  height: 100%;
+  background: rgba(179, 144, 31, 0.363);
+  text-align: left;
+  padding: 150px 50px;
+}
+.bg_test-text {
+  display:  inline-block;                  /*テキスト不透明　背景半透明 インラインブロックに設定 */
+  color: #FFF;
+}
+
+/*----#about---------------------------------------------------------------------------------*/
+#about{
+  .text{
+    text-align: left;
+  }
+}
+@media screen and (max-width: 576px) { 
+  #about{
+    img{
+      width: 70%;
+      height: 70%;
+      margin: 0 auto;
+    }
+    .text{
+      width: 80%;
+      margin: 0 auto;
+      margin-top: 50px;
+    }
+}
+}
+@media screen and (min-width:576px) and (max-width:992px) { 
+  #about{
+    .text{
+      padding-top: 10%;
+    }
+  }
+}
+@media screen and (min-width:992px) {  
+  #about{
+    .col-sm-6{
+      padding: 50px;
+    }
+    .text{
+      padding-top: 10%;
+    }
+  }
+}
+/*----#skill---------------------------------------------------------------------------------*/
+@media screen and (max-width: 576px) { 
+  #skill{
+    .col-6 {
+      margin: 20px auto;
+    }
+  }
+}
+/*---#work------------------------------------------------------------------------------------*/
+#work{
+  .work_images{
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 576px) { 
+  #work{
+    .row{
+      display: flex;           /*①*/
+      flex-direction: column;  /*②セットで縦並び*/
+    }
+  }
+}
+/*----portfolio---------------------------------------------------------------*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+img {
+  vertical-align: middle;
+  border-style: none;
+}
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+}
+.no-gutters > .col,
+.no-gutters > [class*=col-] {
+  padding-right: 0;
+  padding-left: 0;
+}
+@media (min-width: 576px) {
+  .col-sm {
+    flex-basis: 0;
+    flex-grow: 1;
+    min-width: 0;
+    max-width: 100%;
+  }
+  .row-cols-sm-6 > * {
+    flex: 0 0 16.6666666667%;
+    max-width: 16.6666666667%;
+  }
+  .col-sm-auto {
+    flex: 0 0 auto;
+    width: auto;
+    max-width: 100%;
+  }
+  .col-sm-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+}
+
+@media (min-width: 992px) {
+  .col-lg {
+    flex-basis: 0;
+    flex-grow: 1;
+    min-width: 0;
+    max-width: 100%;
+  }
+  .row-cols-lg-4 > * {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .col-lg-auto {
+    flex: 0 0 auto;
+    width: auto;
+    max-width: 100%;
+  }
+  .col-lg-4 {
+    flex: 0 0 33.3333333333%;
+    max-width: 33.3333333333%;
+  }
+}
+
+#portfolio .container-fluid, #portfolio .container-sm, #portfolio .container-md, #portfolio .container-lg, #portfolio .container-xl {
+  max-width: 1920px;
+}
+#portfolio .container-fluid .portfolio-box, #portfolio .container-sm .portfolio-box, #portfolio .container-md .portfolio-box, #portfolio .container-lg .portfolio-box, #portfolio .container-xl .portfolio-box {
+  position: relative;
+  display: block;
+}
+#portfolio .container-fluid .portfolio-box .portfolio-box-caption, #portfolio .container-sm .portfolio-box .portfolio-box-caption, #portfolio .container-md .portfolio-box .portfolio-box-caption, #portfolio .container-lg .portfolio-box .portfolio-box-caption, #portfolio .container-xl .portfolio-box .portfolio-box-caption {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  opacity: 0;
+  color: #fff;
+  background: rgba(244, 98, 58, 0.9);
+
+  background: rgba(179, 154, 147, 0.5);
+  transition: opacity 0.2s ease;
+  text-align: center;
+}
+#portfolio .container-fluid .portfolio-box .portfolio-box-caption .project-category, #portfolio .container-sm .portfolio-box .portfolio-box-caption .project-category, #portfolio .container-md .portfolio-box .portfolio-box-caption .project-category, #portfolio .container-lg .portfolio-box .portfolio-box-caption .project-category, #portfolio .container-xl .portfolio-box .portfolio-box-caption .project-category {
+  font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+#portfolio .container-fluid .portfolio-box .portfolio-box-caption .project-name, #portfolio .container-sm .portfolio-box .portfolio-box-caption .project-name, #portfolio .container-md .portfolio-box .portfolio-box-caption .project-name, #portfolio .container-lg .portfolio-box .portfolio-box-caption .project-name, #portfolio .container-xl .portfolio-box .portfolio-box-caption .project-name {
+  font-size: 1.2rem;
+
+}
+#portfolio .container-fluid .portfolio-box:hover .portfolio-box-caption, #portfolio .container-sm .portfolio-box:hover .portfolio-box-caption, #portfolio .container-md .portfolio-box:hover .portfolio-box-caption, #portfolio .container-lg .portfolio-box:hover .portfolio-box-caption, #portfolio .container-xl .portfolio-box:hover .portfolio-box-caption {
+  opacity: 1;
+}
+
+.text-white-75 {
+  color: rgba(255, 255, 255, 0.75);
+}
+#portfolio{
+ .site{
+  filter: grayscale(100%);
+ }  
+.img_music{
+  filter: grayscale(100%);
+}
+}
+
+/*----#contact_form---------------------------------------------------------------------*/
+#contact_form{
+  .text{ 
+   margin: auto;
+  }
+  p{
+    width: 400px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 576px) { 
+  #contact_form{
+    width: 100%;
+    .text{ 
+     width: 80%;
+     padding-top: 50px;
+     margin: auto;
+    }
+    p{
+      width: 100%;
+      margin: auto;
+    }
+  }
+}
+@media screen and (min-width:576px) and (max-width:992px) { 
+  #contact_form{
+    .text{ 
+     padding-top: 50px;
+    }
+  }
+}
+/*
+@media screen and (max-width: 576px) { 
+
+}
+@media screen and (min-width:576px) and (max-width:992px) { 
+ 
+}
+@media screen and (min-width:992px) {  
+  
+}
+*/
+
+
+@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400);
+
+input::placeholder, textarea::placeholder {
+  color: #aca49c;
+  font-size: 0.875em;
+}
+input:focus::placeholder, textarea:focus::placeholder {
+  color: #bbb5af;
+}
+
+/* on hover placeholder */
+input:hover::placeholder, textarea:hover::placeholder {
+  color: #e2dedb;
+  font-size: 0.875em;
+}
+input:hover:focus::placeholder, textarea:hover:focus::placeholder {
+  color: #cbc6c1;
+}
+input:hover::placeholder, textarea:hover::placeholder {
+  color: #e2dedb;
+  font-size: 0.875em;
+}
+
+#contact_form{
+  font-family: 'Lato', sans-serif;
+  background: #e2dedb;
+  border-radius: 20px;
+  color: #b3aca7;
+}
+#form {
+  margin: 50px auto;
+}
+input {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.875em;
+  width: 90%;
+  height: 50px;
+  padding: 0px 15px;
+  background: transparent;
+  outline: none;
+  color: #726659;
+
+  border: solid 1px #b3aca7;
+  border-bottom: none;
+  transition: all 0.3s ease-in-out;
+}
+
+input:hover {
+  background: #b3aca7;
+  color: #e2dedb;
+}
+
+textarea {
+  width: 90%;
+  max-width: 90%;
+  height: 110px;
+  max-height: 110px;
+  padding: 15px;
+  
+  background: transparent;
+  outline: none;
+  
+  color: #726659;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.875em;
+  
+  border: solid 1px #b3aca7;
+  transition: all 0.3s ease-in-out;
+}
+
+textarea:hover {
+  background: #b3aca7;
+  color: #e2dedb;
+}
+
+#submit {
+  width: 90%;
+  
+  padding: 0;
+  margin: -5px 0px 0px 0px;
+  
+  font-family: 'Lato', sans-serif;
+  font-size: 0.875em;
+  color: #b3aca7;
+  
+  outline:none;
+  cursor: pointer;
+  
+  border: solid 1px #b3aca7;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+#submit:hover {
+  color: #e2dedb;
+}
+#name{
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+#contact_form{
+  a{
+    text-decoration: none;
+    color: #1d0b00;
+    transition: 0.3s ;
+
+  }
+
+  a:hover{
+   color: #CCC;
+  }
+}
+/*---------------------------------*/
+
